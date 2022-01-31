@@ -96,6 +96,19 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
+for filepath in "$@"
+do
+
+	a=`grep ">" "$filepath" | wc -l`
+	b=`basename -a $filepath`
+	echo $a $b
+done 
+
+grep ">" "$@" | wc -w
+exit 
+
+
+
 #Testing push and pull (HOPEFULLY) - Rachel 
 
 #Hi everyone!! Hopefully this works! - Emily 
