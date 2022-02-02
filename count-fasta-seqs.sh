@@ -96,15 +96,17 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
-for filepath in "$@"
+for file in "$@"
 do
 
-	a=`grep ">" "$filepath" | wc -l`
-	b=`basename -a $filepath`
+	a=`grep ">" "$file" | wc -l`
+	b=`basename -a $file`
 	echo $a $b
 done 
 
-grep ">" "$@" | wc -w
+beta=`grep ">" "$@" | wc -w`
+echo $beta
+
 exit 
 
 
